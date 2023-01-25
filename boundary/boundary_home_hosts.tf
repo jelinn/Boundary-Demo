@@ -33,14 +33,14 @@ resource "boundary_target" "mac_mini" {
   ]
 }
 
-resource "boundary_host_static" "mac_mini" {
+resource "boundary_host_static" "ubuntu_mini" {
   name            = "Ubuntu-NUC"
   description     = "Ubuntu - Mini NUC"
   address         = "192.168.1.180"
   host_catalog_id = boundary_host_catalog_static.home-personal.id
 }
 
-resource "boundary_target" "mac_mini" {
+resource "boundary_target" "ubuntu_mini" {
   type                     = "tcp"
   name                     = "ubuntu_mini"
   description              = "Personal Ubuntu Mini target"
