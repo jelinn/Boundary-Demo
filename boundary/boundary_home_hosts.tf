@@ -29,6 +29,6 @@ resource "boundary_target" "mac_mini" {
   session_connection_limit = -1
   default_port             = 22
   host_source_ids = [
-    boundary_host_set_static.personal_machines.id
+    boundary_host_set_static.home-personal.id
   ]
 }
