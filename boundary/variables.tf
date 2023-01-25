@@ -26,3 +26,15 @@ variable boundary_aws_access_key{
 variable boundary_aws_secret_access_key{
 
 }
+
+variable bob_password{
+
+}
+
+variable alice_password{
+
+}
+
+variable jelinn_password{
+    
+}
