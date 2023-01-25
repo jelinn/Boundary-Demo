@@ -7,6 +7,14 @@ resource "boundary_role" "manage_personal" {
   grant_strings   = ["id=*;type=*;actions=read,list"]
 }
 
+resource "boundary_role" "read_only" {
+  name        = "read_only"
+  description = "Read only"
+  scope_id    = boundary_scope.personal.id
+  principal_ids   = [boundary_user.jelinn.id]
+  grant_strings   = ["id=*;type=*;actions=read,list"]
+}
+
 resource "boundary_role" "manage_cloud" {
   name        = "manage_cloud"
   description = "Manage cloud resources"
