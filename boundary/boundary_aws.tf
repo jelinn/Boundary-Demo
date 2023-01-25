@@ -9,6 +9,6 @@ resource "boundary_host_catalog_plugin" "aws_example" {
   # the secrets below must be generated in aws by creating a aws iam user with programmatic access
   secrets_json = jsonencode({
     "access_key_id"     = var.boundary_aws_access_key,
-    "secret_access_key" = var.boundary_aws_secret_access_key_value
+    "secret_access_key" = var.boundary_aws_secret_access_key
   })
 }

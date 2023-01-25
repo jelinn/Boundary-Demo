@@ -23,6 +23,6 @@ variable boundary_aws_access_key{
 
 }
 
-variable boundary_aws_secret_access_key_value{
-    
+variable boundary_aws_secret_access_key{
+
 }
