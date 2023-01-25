@@ -11,7 +11,7 @@ resource "boundary_role" "manage_cloud" {
   name        = "manage_cloud"
   description = "Manage cloud resources"
   scope_id    = boundary_scope.cloud_services.id
-  principal_ids   = [boundary_user.id]
+  principal_ids   = [boundary_user.bob.id]
   grant_strings   = ["id=*;type=*;actions=read,list"]
 }
 
