@@ -59,7 +59,7 @@ resource "boundary_host_static" "pi1" {
   host_catalog_id = boundary_host_catalog_static.home-personal.id
 }
 
-resource "boundary_target" "pi2" {
+resource "boundary_target" "pi1" {
   type                     = "tcp"
   name                     = "pi1"
   description              = "Personal raspbery pi1"
