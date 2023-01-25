@@ -11,7 +11,7 @@ resource "boundary_role" "read_only" {
   name        = "read_only"
   description = "Read only"
   scope_id    = boundary_scope.personal.id
-  principal_ids   = [boundary_user.jelinn.id]
+  principal_ids   = [boundary_user.jelinn.id, boundary_user.bob.id, boundary_user.alice.id]
   grant_strings   = ["id=*;type=*;actions=read,list"]
 }
 
@@ -20,7 +20,7 @@ resource "boundary_role" "manage_cloud" {
   description = "Manage cloud resources"
   scope_id    = boundary_scope.cloud_services.id
   principal_ids   = [boundary_user.bob.id]
-  grant_strings   = ["id=*;type=*;actions=read,list"]
+  grant_strings   = ["id=*;type=*;actions=read,list,authorize-session"]
 }
 
 resource "boundary_role" "manage_home" {
@@ -28,5 +28,5 @@ resource "boundary_role" "manage_home" {
   description = "Manage home resources"
   scope_id    = boundary_scope.home_servers.id
   principal_ids   = [boundary_user.alice.id]
-  grant_strings   = ["id=*;type=*;actions=read,list"]
+  grant_strings   = ["id=*;type=host-catalogs;actions=read,list", "id=*; type=target; actions=read,list,authorize-session"]
 }
