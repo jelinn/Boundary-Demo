@@ -6,7 +6,7 @@ resource "boundary_scope" "personal" {
   auto_create_admin_role   = true
 }
 
-resource "boundary_scope" "cloud-services" {
+resource "boundary_scope" "cloud_services" {
   name             = "cloud-services"
   description      = "Manage cloud resources"
   scope_id                 = boundary_scope.personal.id
@@ -14,7 +14,7 @@ resource "boundary_scope" "cloud-services" {
   auto_create_default_role = true
 }
 
-resource "boundary_scope" "home-servers" {
+resource "boundary_scope" "home_servers" {
   name             = "home-servers"
   description      = "Manage personal home servers"
   scope_id                 = boundary_scope.personal.id
