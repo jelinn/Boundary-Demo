@@ -2,7 +2,7 @@
 resource "boundary_host_catalog_static" "home-personal" {
   name        = "personal"
   description = "For managing personal machines"
-  scope_id    = boundary_scope.home-servers.id
+  scope_id    = boundary_scope.home_servers.id
 }
 
 resource "boundary_host_set_static" "home-personal" {
@@ -25,7 +25,7 @@ resource "boundary_target" "mac_mini" {
   type                     = "tcp"
   name                     = "mac_mini"
   description              = "Personal Mac Mini target"
-  scope_id                 = boundary_scope.home-servers.id
+  scope_id                 = boundary_scope.home_servers.id
   session_connection_limit = -1
   default_port             = 22
   host_source_ids = [
@@ -44,7 +44,7 @@ resource "boundary_target" "ubuntu_mini" {
   type                     = "tcp"
   name                     = "ubuntu_mini"
   description              = "Personal Ubuntu Mini target"
-  scope_id                 = boundary_scope.home-servers.id
+  scope_id                 = boundary_scope.home_servers.id
   session_connection_limit = -1
   default_port             = 22
   host_source_ids = [

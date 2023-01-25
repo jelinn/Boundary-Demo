@@ -16,7 +16,7 @@ resource "boundary_group" "home" {
   name        = "home"
   description = "Home machines"
   member_ids  = [boundary_user.alice.id, boundary_user.jelinn.id]
-  scope_id    = boundary_scope.homes_servers.id
+  scope_id    = boundary_scope.home_servers.id
 }
 
 
