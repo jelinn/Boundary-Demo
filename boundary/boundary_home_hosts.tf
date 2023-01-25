@@ -51,3 +51,22 @@ resource "boundary_target" "ubuntu_mini" {
     boundary_host_set_static.home-personal.id
   ]
 }
+
+resource "boundary_host_static" "pi2" {
+  name            = "pi2"
+  description     = "pi2"
+  address         = "192.168.1.201"
+  host_catalog_id = boundary_host_catalog_static.home-personal.id
+}
+
+resource "boundary_target" "pi2" {
+  type                     = "tcp"
+  name                     = "pi2"
+  description              = "Personal raspbery pi2 - number 2. Boundary worker"
+  scope_id                 = boundary_scope.home_servers.id
+  session_connection_limit = -1
+  default_port             = 22
+  host_source_ids = [
+    boundary_host_set_static.home-personal.id
+  ]
+}
