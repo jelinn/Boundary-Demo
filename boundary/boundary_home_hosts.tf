@@ -32,3 +32,22 @@ resource "boundary_target" "mac_mini" {
     boundary_host_set_static.home-personal.id
   ]
 }
+
+resource "boundary_host_static" "mac_mini" {
+  name            = "Ubuntu-NUC"
+  description     = "Ubuntu - Mini NUC"
+  address         = "192.168.1.180"
+  host_catalog_id = boundary_host_catalog_static.home-personal.id
+}
+
+resource "boundary_target" "mac_mini" {
+  type                     = "tcp"
+  name                     = "ubuntu_mini"
+  description              = "Personal Ubuntu Mini target"
+  scope_id                 = boundary_scope.home-servers.id
+  session_connection_limit = -1
+  default_port             = 22
+  host_source_ids = [
+    boundary_host_set_static.home-personal.id
+  ]
+}
