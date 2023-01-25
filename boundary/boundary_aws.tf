@@ -3,7 +3,7 @@
 resource "boundary_host_catalog_plugin" "aws_example" {
   name            = "personal-aws-us-east-1"
   description     = "Personal cloud resources - us-east-1"
-  scope_id        = boundary_scope.cloud_sarvices.id
+  scope_id        = boundary_scope.cloud_services.id
   plugin_name     = "aws"
   attributes_json = jsonencode({ "region" = "us-east-1" })
 
