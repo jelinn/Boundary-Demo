@@ -13,7 +13,7 @@ resource "boundary_host_set_static" "home-personal" {
       boundary_host_static.mac_mini.id,
       boundary_host_static.pi1.id,
       boundary_host_static.pi2.id,
-      boudary_host_static.pi3.id
+      boudary_host_static.pi3.id,
       boundary_host_static.ubuntu_mini.id
   ]
 }
