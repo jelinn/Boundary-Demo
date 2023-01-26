@@ -10,7 +10,11 @@ resource "boundary_host_set_static" "home-personal" {
   description     = "Host set for personal machines"
   host_catalog_id = boundary_host_catalog_static.home-personal.id
   host_ids = [
-      boundary_host_static.mac_mini.id
+      boundary_host_static.mac_mini.id,
+      boundary_host_static.pi1.id,
+      boundary_host_static.pi2.id,
+      boudary_host_static.pi3.id,
+      boundary_host_static.ubuntu_mini.id
   ]
 }
 
