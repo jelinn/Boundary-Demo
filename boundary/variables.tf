@@ -39,11 +39,4 @@ variable jelinn_password{
     
 }
 
-variable hcp_vault_addr{
-    
-}
-
-variable hcp_vault_token{
-
-}
-    
+ 
