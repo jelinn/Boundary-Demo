@@ -6,6 +6,8 @@
 #   scope_id        = boundary_scope.cloud_services.id
 #   plugin_name     = "aws"
 #   attributes_json = jsonencode({ "region" = "us-east-1" })
+#   acccess_key_id = 
+# }
 
 #   # recommended to pass in aws secrets using a file() or using environment variables
 #   # the secrets below must be generated in aws by creating a aws iam user with programmatic access
