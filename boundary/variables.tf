@@ -19,13 +19,13 @@ variable boundary_deploy_workspace{
     default = "Boundary-Demo-Deploy"
 }
 
-variable boundary_aws_access_key{
+#variable boundary_aws_access_key{
 
-}
+#}
 
-variable boundary_aws_secret_access_key{
+#variable boundary_aws_secret_access_key{
 
-}
+#}
 
 variable bob_password{
 
