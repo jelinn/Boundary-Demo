@@ -1,6 +1,6 @@
 resource "boundary_scope" "personal" {
   scope_id                 = "global"
-  name                     = "Personal"
+  name                     = "Personal_Machines"
   description              = "Access to personal machines"
   auto_create_default_role = true
   auto_create_admin_role   = true
