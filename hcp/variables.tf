@@ -1,4 +1,9 @@
 variable boundary_cluster_name{}
 variable boundary_user_name{}
 variable boundary_password{}
-variable tier{}
+variable boundary_tier{}
+variable vault_tier{}
+variable vault_cluster_name{}
+variable hvn_region{}
+variable hvn_id{}
+variable hvn_cidr{}
