@@ -3,3 +3,4 @@ resource "hcp_boundary_cluster" "example" {
   username   = var.boundary_user_name
   password   = var.boundary_password
   tier 	     = var.tier
+}
