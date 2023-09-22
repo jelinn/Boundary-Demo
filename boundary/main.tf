@@ -5,7 +5,7 @@ terraform {
   }
 }
 }
-provider "vault"{}
+#provider "vault"{}
 
 
 provider "boundary" {

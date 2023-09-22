@@ -38,8 +38,8 @@ variable alice_password{
 variable jelinn_password{
     
 }
-variable vault_token{}
-variable vault_addr{}
+#variable vault_token{}
+#variable vault_addr{}
 
 variable vault_postgres_boundary{
     default = "boundary/postgres"
